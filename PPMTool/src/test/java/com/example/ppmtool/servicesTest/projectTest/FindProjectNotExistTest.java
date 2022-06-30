@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @SpringBootTest(classes = PpmToolApplication.class)
 @RunWith(SpringJUnit4ClassRunner.class)
-public class ProjectRetrieveTest2 {
+public class FindProjectNotExistTest {
     // test for "project does not exist"
     @Autowired
     private ProjectService projectService;

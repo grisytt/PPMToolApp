@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @SpringBootTest(classes = PpmToolApplication.class)
 @RunWith(SpringJUnit4ClassRunner.class)
-public class ProjectDeleteTest2 {
+public class DeleteProjectNotExistTest {
     // test for "project does not exist" while deleting
     @Autowired
     private ProjectService projectService;

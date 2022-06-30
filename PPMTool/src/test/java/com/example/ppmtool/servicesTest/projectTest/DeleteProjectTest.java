@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @SpringBootTest(classes = PpmToolApplication.class)
 @RunWith(SpringJUnit4ClassRunner.class)
-public class ProjectDeleteTest1 {
+public class DeleteProjectTest {
     // delete project successfully
     @Autowired
     private ProjectService projectService;

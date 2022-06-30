@@ -20,7 +20,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @SpringBootTest(classes = PpmToolApplication.class)
 @RunWith(SpringJUnit4ClassRunner.class)
-public class ProjectRetrieveTest3 {
+public class FindProjectByIdentifierWithWrongUserTest {
     // test for "project belongs to other account"
     @Autowired
     private ProjectService projectService;

@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @SpringBootTest(classes = PpmToolApplication.class)
 @RunWith(SpringJUnit4ClassRunner.class)
-public class ProjectCreateTest1 {
+public class CreateRepeatedProjectTest {
     // createRepeatedProjectTest
     @Autowired
     private ProjectService projectService;
@@ -43,6 +43,7 @@ public class ProjectCreateTest1 {
         project.setProjectIdentifier("junit");
         project.setProjectName("NOT BLANK");
         project.setDescription("NOT BLANK");
+        project.setProjectLeader("testUser@email.com");
         projectRepository.save(project);
     }
 

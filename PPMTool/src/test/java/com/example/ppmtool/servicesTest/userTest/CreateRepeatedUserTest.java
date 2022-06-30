@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @SpringBootTest(classes = PpmToolApplication.class)
 @RunWith(SpringJUnit4ClassRunner.class)
-public class UserCreateTest2 {
+public class CreateRepeatedUserTest {
 
     @Autowired
     private UserRepository userRepository;
@@ -40,10 +40,16 @@ public class UserCreateTest2 {
     }
 
     @Test
-    public void createNewUserTest() {
+    public void createRepeatedUserTest() {
+        User newUser = new User();
+        newUser.setUsername("testUser@email.com");
+        newUser.setPassword("NOT BLANK");
+        newUser.setConfirmPassword("NOT BLANK");
+        newUser.setFullName("NOT BLANK");
+        exception.expect(UsernameAlreadyExistsException.class);
+        exception.expectMessage("Username '" + newUser.getUsername() + "' already exists");
 
-        UsernameAlreadyExistsException("Username '" + newUser.getUsername() + "' already exists");
-
+        userService.saveUser(newUser);
     }
 
     @After
